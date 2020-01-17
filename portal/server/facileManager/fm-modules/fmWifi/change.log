@@ -1,0 +1,29 @@
+0.3.0 (2019-10-01)
+==================
+* Server - [bug] Fixed dashboard display of uptime when multiple APs are in use.
+* Server - [improvement] Added display of WLAN frequency.
+* Server - [bug] Fixed PHP errors.
+* Both   - [improvement] Added AP interface addresses to the dashboard.
+* Client - [security] Fixed an issue where local privileges could be escalated
+           to root. (Found and reported by Arturs Danilevics, Oskars Vegeris, and
+           Ivars Vids)
+* Server - [security] Ensured header() calls are not skipped. (Found and reported
+           by Arturs Danilevics, Oskars Vegeris, and Ivars Vids)
+
+0.2.1 (2019-03-20)
+==================
+* Server - [bug] Fixed installs and upgrades with PHP 7.3.x. (Issue #436)
+* Server - [bug] Added missing help text for configuration options.
+
+0.2 (2019-03-16)
+================
+* Server - [bug] Fixed PHP errors.
+* Server - [feature] - Added support to configure additional options.
+* Server - [bug] Fixed database cleanup routine.
+* Server - [improvement] Cleaned up redundant code.
+* Client - [improvement] Added support for Scientific Linux. (Issue #431)
+* Server - [improvement] CSS and icon changes.
+
+0.1 (2018-12-15)
+================
+* Initial release.

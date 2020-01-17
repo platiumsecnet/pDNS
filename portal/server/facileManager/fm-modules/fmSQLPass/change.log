@@ -1,0 +1,119 @@
+1.5.2 (2019-10-01)
+==================
+* Server - [security] Ensured header() calls are not skipped. (Found and reported
+           by Arturs Danilevics, Oskars Vegeris, and Ivars Vids)
+
+1.5.1 (2019-03-20)
+==================
+* Server - [bug] Fixed installs and upgrades with PHP 7.3.x. (Issue #436)
+
+1.5 (2019-03-16)
+================
+* Server - [improvement] Cleaned up redundant code.
+* Server - [improvement] CSS and icon changes.
+* Server - [bug] Fixed PHP errors.
+
+1.4.1 (2018-12-15)
+==================
+* Server - [bug] Fixed display-process-all functionality.
+
+1.4 (2017-12-13)
+================
+* Server - [improvement] Pagination is now displayed even with no items.
+* Server - [improvement] Popup boxes now disable body scrolling.
+
+1.3.2 (2017-10-10)
+==================
+* Server - [bug] Fixed dashboard text.
+
+1.3.1 (2017-07-06)
+==================
+* Server - [improvement] Updated German translation.
+
+1.3 (2017-06-22)
+================
+* Server - [bug] Fixed the upgrade process.
+* Server - [improvement] Database errors now get displayed if the Show Errors
+           setting is enabled.
+* Server - [improvement] Code clean up.
+* Server - [improvement] Added locale number formatting.
+* Server - [improvement] Code changes to better reference shared classes.
+* Server - [improvement] Utilizes response error formatting.
+* Server - [improvement] Pagination is added to all pages.
+* Server - [feature] Added support for PostgreSQL. (Issue #178)
+* Server - [improvement] Language changes.
+* Server - [improvement] Added item name to the delete confirmations. (Issue #185)
+* Server - [bug] Added missing translation text and removed duplicates.
+* Server - [feature] Use mysqli functions where available. (Issue #343)
+
+1.2.3 (2016-07-21)
+==================
+* Server - [improvement] AJAX now redirects to login page when fM and module
+           database updates are required.
+
+1.2.2 (2016-04-24)
+==================
+* Server - [improvement] Updated help file.
+* Server - [bug] Under certain browsers, the jQuery would not execute. (Issue #298)
+
+1.2.1 (2016-03-11)
+==================
+* Server - [bug] Enclosed database references in backticks in SQL statements. (Issue #290)
+
+1.2 (2015-12-02)
+================
+* Server - [feature] Added user group support. (Issue #211)
+* Server - [improvement] Replaced Add New image with Font Awesome icon.
+
+1.1 (2015-04-27)
+================
+* Server - [feature] Added support for menu bar notifications. (Issue #116)
+* Server - [bug] Fixed bulk action checkbox logic.
+* Server - [bug] Fixed password setting form and output logic.
+* Server - [improvement] jQuery is now used to enable/disable items.
+
+1.0.1 (2014-08-20)
+==================
+* Server - [improvement] Gave the popups a facelift.
+* Server - [improvement] Fixed sort order of several pages. (Issue #117)
+* Server - [improvement] Cleaned up some code.
+
+1.0 (2014-05-14)
+================
+* Server - Added file extensions to all redirects and links.
+* Server - Cleaned up code.
+* Server - [security] Fixed an issue where unpriviledged users could save module
+           settings.
+* Server - Moved module options into fM options table.
+* Server - Uses new fM user capabilities backend.
+* Server - Uses new fM menu platform.
+
+1.0-b7 (2014-03-24)
+===================
+* Server - Improved installer and upgrader error handling.
+
+1.0-b6 (2014-03-18)
+===================
+* Server - Moved js toggle function to be shared.
+* Server - Improved upgrade error handling.
+
+1.0-b5 (2013-12-16)
+===================
+* Server - [bug] Fixed false error reporting. (Issue #36)
+* Server - Updated jquery animations.
+
+1.0-b4 (2013-11-06)
+===================
+* Server - [feature] Added server type support checks.
+
+1.0-b3 (2013-10-16)
+===================
+* Server - Changed color of disabled items.
+
+1.0-b2 (2013-10-14)
+===================
+* Server - [feature] Added option to specify database server port.
+
+1.0-b1 (2013-09-30)
+===================
+* Initial release.

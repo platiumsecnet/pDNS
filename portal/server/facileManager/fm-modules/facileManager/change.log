@@ -1,0 +1,596 @@
+3.5.1 (2019-10-16)
+==================
+* Client - [bug] Fixed parsing of the apache2 user on Debian systems. (Issue #462)
+
+3.5.0 (2019-10-01)
+==================
+** Minimum PHP version is now 5.5 for the web server **
+* Server - [bug] Fixed PHP errors during installation process.
+* Server - [improvement] Popup windows are now draggable only by the title bar.
+* Server - [improvement] Refinements around grabbable rows.
+* Server - [bug] Configuration previews no longer process characters as html.
+* Server - [security] Fixed an issue where unauthenticated password resets could
+           occur. (Found and reported by Arturs Danilevics, Oskars Vegeris, and
+           Ivars Vids)
+* Both   - [security] Fixed an issue where local privileges could be escalated
+           to root. (Found and reported by Arturs Danilevics, Oskars Vegeris, and
+           Ivars Vids)
+* Server - [security] Fixed an issue with password resets where local privilege
+           escalation and SQL injections could occur. (Found and reported by 
+           Arturs Danilevics, Oskars Vegeris, and Ivars Vids)
+* Server - [security] Changed the default password reset expiration to 15 minutes.
+* Server - [security] Updated the user password hashing to a more secure algorithm.
+           (Found and reported by Arturs Danilevics, Oskars Vegeris, and Ivars Vids)
+* Server - [security] Fixed an issue where admin-servers.php was susceptible to
+           SQL injection. (Found and reported by Arturs Danilevics, Oskars Vegeris,
+           and Ivars Vids)
+* Server - [security] Ensured header() calls are not skipped. (Found and reported
+           by Arturs Danilevics, Oskars Vegeris, and Ivars Vids)
+* Server - [improvement] Updated .htaccess installation checks verbiage. (Issue #461)
+* Client - [bug] Fixed parsing of the apache2 user on Debian systems. (Issue #462)
+* Server - [improvement] CSS tweaks for shadow containers.
+* Client - [improvement] Added support to gather interface addresses.
+
+3.4.2 (2019-05-17)
+==================
+* Server - [bug] Fixed font-awesome graphics for offline installations. (Issue #441)
+
+3.4.1 (2019-03-20)
+==================
+* Server - [security] Fixed user management privileges so super-admins cannot
+           be added, modified, or deleted by less privileged users. (Issue #436)
+* Server - [bug] Fixed an issue where user groups could not be deleted.
+* Server - [bug] Fixed installs and upgrades with PHP 7.3.x. (Issue #436)
+* Server - [bug] Fixed PHP 7.3.x errors. (Issue #436)
+
+3.4 (2019-03-16)
+================
+* Server - [improvement] Menu badge counts become 99+ when greater than 100.
+* Server - [improvement] Updating the core via the web interface no longer
+           requires config.inc.php to be writeable by the web server user.
+* Server - [improvement] Cleaned up redundant code.
+* Server - [bug] Fixed an issue where the installer would display a blank
+           grey screen. (Issue #417)
+* Server - [improvement] Added tooltip-copy CSS.
+* Server - [improvement] fM core and module server upgrade packages now use
+           the proxy server settings. (Issue #388)
+* Client - [feature] Added support for using a proxy server. (Issue #388)
+* Server - [improvement] Modules can no longer be upgraded if the minimum core
+           version is not installed.
+* Server - [improvement] CSS and icon changes.
+
+3.3 (2018-12-15)
+================
+* Server - [bug] Properly support the OS icon for Raspbian.
+* Client - [improvement] Moved getInterfaceNames() to core.
+* Server - [improvement] CSS changes.
+* Server - [bug] Added missing select2 image.
+* Server - [bug] Fixed text.
+* Client - [improvement] Added function to detect if the client is a
+           Debian-based system.
+* Client - [bug] Suppressed crontab error during installation if the user
+           crontab does not exist.
+* Server - [improvement] Clears database result variable before use to provide
+           more accurate results.
+* Server - [improvement] Added Raspbian as a valid Debian-based system.
+* Server - [improvement] Added function to run remote commands via SSH or HTTP/S
+           as the server configuration case may be.
+* Client - [bug] Fixed support for non-standard server ports.
+
+3.2 (2018-10-26)
+================
+* Server - [improvement] UI enhancements.
+* Server - [bug] Fixed client interaction 500 error codes.
+* Server - [bug] Fixed user additions to include comments.
+* Server - [improvement] Add support to get server list for any module.
+* Server - [improvement] User passwords can now be set by users granted with
+           the 'User Management' privilege. (Issue #416)
+* Client - [bug] Files are now chgrp'ed if available.
+* Server - [improvement] Added support for noscroll pages.
+
+3.1.1 (2017-12-18)
+==================
+* Server - [bug] Fixed username display in the Admin Logs. (Issue #405)
+
+3.1.0 (2017-12-13)
+==================
+* Server - [improvement] Added option to skip client file checks to the
+           runRemoteCommand() function.
+* Server - [improvement] Visually show disabled form buttons.
+* Server - [improvement] Additional blocks can now be placed on the left or right
+           of the table header.
+* Server - [improvement] Moved the grab CSS/JS to the core for other modules to use.
+* Server - [improvement] fm_logs now stores the username instead of userid.
+* Server - [improvement] Added support to explode module group IDs. (Issue #375)
+* Server - [improvement] Pagination is now displayed even with no items.
+* Client - [bug] Chown directories only if they exist.
+* Server - [improvement] Popup boxes now disable body scrolling.
+
+3.0.3 (2017-10-10)
+==================
+* Server - [bug] Fixed LDAP authentication with group memberships. (Issue #392)
+* Server - [bug] Fixed PHP error. (Issue #386)
+* Server - [feature] Added support for using a proxy server. (Issue #388)
+
+3.0.2 (2017-08-07)
+==================
+* Server - [bug] Fixed table sorting.
+
+3.0.1 (2017-07-06)
+==================
+* Server - [improvement] Added module name and version to header.
+* Client - [bug] Fixed the support for non-standard ports. (Issue #382)
+* Server - [improvement] Updated German translation.
+
+3.0 (2017-06-22)
+================
+* Client - [bug] Fixed OS distro reporting for RHEL when using lsb tools. (Issue #379)
+* Server - [bug] Fixed the upgrade process.
+* Server - [feature] Added setting to change the branding logo.
+* Server - [feature] Added comment field to users.
+* Server - [improvement] Reworked the search bar for easier usage of it.
+* Server - [improvement] Database errors now get displayed if the Show Errors
+           setting is enabled.
+* Server - [improvement] Updated 404 page styling.
+* Both   - [improvement] Code clean up.
+* Both   - [improvement] Updated the error messages surrounding failed SSH
+           connections. (Issue #371)
+* Server - [improvement] CSS tweaks for Firefox compatibility.
+* Client - [bug] Client installer ensures absolute path is defined in the sudoers
+           file. (Issue #372)
+* Server - [improvement] Added locale number formatting.
+* Server - [improvement] Code changes to better reference shared classes.
+* Server - [security] Fixed an issue where unprivileged users could still make
+           changes before a forced logout.
+* Server - [improvement] Code changes to add global response error formatting.
+* Server - [improvement] Added Windows server icon for other modules to use.
+* Server - [improvement] Pagination is added to all pages.
+* Server - [bug] Fixed an issue where the Edit Profile menu option did nothing.
+* Server - [improvement] Code clean up.
+* Server - [improvement] Replaced several icons with Font Awesome fonts.
+* Server - [improvement] CSS tweaks.
+* Server - [bug] Fixed an issue where local account passwords could not be
+           changed when LDAP authentication was being used. (Issue #360)
+* Server - [feature] Added server update support via the modules page. (Issue #113)
+* Server - [improvement] Cleaned up server connection tests output.
+* Server - [improvement] Language changes.
+* Server - [bug] Fixed mysql requirement check. (result of adding #343)
+* Server - [improvement] Updated error page titles.
+* Server - [improvement] Swapped the plus sign for "Add New" text.
+* Server - [bug] Fixed help file with PHP 7 installations. (Issue #354)
+* Server - [improvement] Added item name to the delete confirmations. (Issue #185)
+* Server - [bug] Fixed LDAP authentication using group membership requirements
+           with Active Directory. (Issue #342)
+* Server - [bug] Fixed PHP error during installer with an empty database.
+* Server - [bug] Fixed module installation status through modules page.
+* Server - [bug] Added missing translation text and removed duplicates.
+* Server - [bug] Fixed Redhat clients only reporting 'Red' as the OS.
+* Server - [feature] Use mysqli functions where available. (Issue #343)
+* Server - [feature] Added setting to send audit logs to syslog. (Issue #326)
+
+2.3.3 (2016-10-07)
+==================
+* Server - [bug] Fixed an issue where fM would hang during the software update
+           check. (Issue #353)
+
+2.3.2 (2016-09-22)
+==================
+* Server - [bug] Fixed an issue with clients incorrectly updating on every
+           polling cycle. (Issue #348)
+
+2.3.1 (2016-08-23)
+==================
+* Server - [bug] Fixed an issue where i18n requirement checks may fail. (Issue #335)
+* Client - [bug] Fixed a PHP error in the installer.
+
+2.3 (2016-07-21)
+================
+* Server - [improvement] Added support to load any additional js files in the
+           module directory (fm-modules/(module)/js/).
+* Server - [improvement] Removed boolean params for printHeader().
+* Server - [improvement] Updated buildSelect() to allow an array of single options.
+* Server - [bug] Fixed user creations that broke in 2.2.1.
+* Server - [improvement] Made the tooltip CSS globally available.
+* Server - [improvement] Created global variable for module images directory.
+* Server - [improvement] User session timestamp gets logged and login and logout.
+* Server - [bug] Fixed PHP errors during authentication which prevented successful
+           session creation.
+* Server - [feature] Added setting to define custom login message.
+* Server - [bug] Removed an unnecessary button during installation.
+* Server - [improvement] AJAX now redirects to login page when fM and module
+           database updates are required.
+* Server - [bug] Fixed an issue where i18n requirement checks may fail.
+* Both   - [security] Improved permission support for files installed by the
+           client. (Issue #320)
+
+2.2.1 (2016-06-14)
+==================
+* Server - [bug] Fixed issue with adding users to groups. (Issue #319)
+* Server - [improvement] UTC is now an available timezone. (Issue #318)
+* Server - [improvement] Removed an unnecessary database call when determining
+           if there are any updates available.
+
+2.2 (2016-04-24)
+================
+* Client - Upgrading requires a manual installation using the steps in README.md.
+* Both   - [improvement] Cleaned up duplicate functions to simplify code.
+* Client - [feature] Added the client 'reinstall' option.
+* Client - [improvement] Output now wordwraps based on the number of columns
+           in the shell (based on $COLUMNS environment variable).
+* Server - [bug] Fixed server group config build process.
+* Server - [improvement] SSH login failure messages differentiate between login
+           failure and missing client script.
+* Server - [improvement] Updated help file.
+* Server - [improvement] CSS tweaks.
+* Client - [improvement] Silenced client install grep commands.
+* Server - [bug] Under certain browsers, the jQuery would not execute. (Issue #298)
+* Client - [improvement] SSH public keys are now stored in authorized_keys
+           instead of the deprecated authorized_keys2. (Issue #303)
+* Server - [improvement] Improved installation checks and added more messaging.
+* Server - [bug] Installation checks no longer throw a PHP fatal error when the
+           .htaccess file is missing. (Issue #306 #308)
+* Server - [improvement] Added French translation.
+* Server - [bug] No longer attempts to load hidden files.
+
+2.1.5 (2016-03-11)
+==================
+* Server - [bug] Fixed module changes. (Issue #292)
+* Server - [bug] Enclosed database references in backticks in SQL statements. (Issue #290)
+
+2.1.4 (2016-01-24)
+==================
+* Server - [bug] Fixed duplicating template user (result of adding #211).
+
+2.1.3 (2015-12-10)
+==================
+* Client - [bug] Supported sys_get_temp_dir() with PHP < 5.2.1.
+
+2.1.2 (2015-12-08)
+==================
+* Server - [bug] Fixed server config builds. (Issue #269)
+
+2.1.1 (2015-12-07)
+==================
+* Server - [bug] Fixed PHP error when changing the server status. (Issue #267)
+* Server - [bug] Clients would not update the database during installation
+           (result of adding #223).
+* Client - [bug] Installer would create the SSH key incorrectly. (Issue #236 #260)
+* Server - [bug] fM defined temporary directory was not always used.
+* Server - [improvement] Overall performance improvements. (Issue #224)
+
+2.1 (2015-12-02)
+================
+* Server - [feature] Added ability to purge logs. (Issue #212)
+* Client - [feature] Added no-sudoers client option. (Issue #221)
+* Server - [bug] Fixed Modules badge counts.
+* Server - [improvement] Minor UI edits.
+* Server - [improvement] The default Super Admin account can login even if LDAP
+           is configured.
+* Client - [bug] Ensure serial number is an integer at install. (Issue #232)
+* Both   - [feature] Added no-update client installer parameter. (Issue #223)
+* Server - [feature] Added user group support. (Issue #211)
+* Server - [improvement] Upgraded to Font Awesome 4.4.0 and changed some icons.
+* Server - [improvement] Third-party resources now load locally. (Issue #244)
+* Server - [improvement] fM upgrades now give the option to backup the database.
+* Server - [bug] Fixed server group bulk actions. (Issue #256)
+* Server - [bug] Fixed intermittent login issues. (Issue #258)
+
+2.0.3 (2015-06-29)
+==================
+* Server - [bug] Fixed LDAP Group Attribute support. (Issue #226)
+* Server - [bug] Fixed module badge counts.
+
+2.0.2 (2015-05-27)
+==================
+* Server - [bug] Fixed password reset hint text. (Issue #212)
+* Client - [bug] Cron entries are now entered with full path when installer is
+           invoked with a relative path. (Issue #216)
+* Server - [bug] Fixed user creation when php-ldap is not installed. (Issue #212)
+
+2.0.1 (2015-05-03)
+==================
+* Server - [security] Unauthorized users can no longer see the server config
+           via the preview button. (Issue #210)
+* Server - [bug] Fixed client installation output formatting.
+* Client - [bug] Sets correct file mode for sudoers files.
+* Server - [bug] Fixed CSS at login screen.
+
+2.0 (2015-04-27)
+================
+* Server - [improvement] Updated pagination handling.
+* Server - [feature] Added ability to update all servers with a single click on
+           the top menu bar. (Issue #116)
+* Server - [improvement] Improved support for Admin Tools error messages.
+* Server - [improvement] Popup boxes are now draggable.
+* Server - [feature] Added framework for record searching. (Issue #149)
+* Client - [improvement] Added support for sudoers includedir parameter and no
+           longer disables requiretty and env_reset globally.
+* Server - [improvement] Skips apache rewrite module check for CGI/FCGI
+           implementations. (Issue #91)
+* Server - [feature] FM_NO_HTACCESS is now a supported defined constant to
+           remove .htaccess requirement. (Issue #73)
+* Server - [improvement] Updated help file.
+* Server - [bug] Installer now checks to ensure the database and records already
+           exist before running. (Issue #166)
+* Server - [improvement] Remove the Admin->Users menu item when authentication
+           is not used.
+* Server - [improvement] Fixed PHP session errors when no authentication is used.
+* Server - [bug] Fixed bulk action checkbox logic.
+* Server - [bug] Fixed PHP errors during user account window when using a module
+           other than fmDNS (introduced in 1.3).
+* Server - [feature] Added i18n support. (Issue #106)
+* Server - [bug] Fixed upgrade messages after facileManager is upgraded.
+* Server - [security] Added ability to enable/disable automatic client
+           registration in the database. (Issue #122)
+* Server - [bug] Fixed PHP error at login screen when session times out.
+* Server - [improvement] Upgraded to select2 3.5.2.
+* Server - [improvement] jQuery is now used to enable/disable users.
+* Server - [improvement] The installer and upgrader received a facelift.
+* Server - [bug] Fixed an issue where user permissions could not be removed when
+           editing a user account.
+* Server - [improvement] The installer now uses checkmarks instead of text.
+* Server - [improvement] Modules can now be managed in bulk.
+* Server - [improvement] The upgrader will now run the module upgrade routines.
+* Server - [improvement] Server config build previews now display line numbers
+           and highlight lines in question.
+* Server - [feature] User accounts can now be created from a user template.
+* Server - [improvement] LDAP user template can now be undefined which will deny
+           authentication. This is to add another level of user access control.
+* Server - [improvement] The installer provides the correct error message when
+           the database connection fails.
+* Server - [improvement] The installer now works with MySQL auto_increment_offset
+           that is greater than one.
+* Server - [improvement] Swapped /tmp for sys_get_temp_dir().
+* Server - [improvement] Incorporated mod_headers to save bandwidth.
+* Server - [improvement] SSH keys can now be saved if the file already exists.
+* Server - [improvement] Admin logs are now wordwrapped if the data is too long.
+* Both   - [feature] Added ability to define the SSH user to use. (Issue #182)
+* Server - [improvement] Post-upgrade redirect goes to the dashboard instead of
+           the modules page.
+* Client - [improvement] Determines FQDN at install time. (Issue #192).
+
+1.3.1 (2014-11-10)
+==================
+* Client - [bug] Fixed issue where config file parameters are not found and an
+           empty value is returned. (Issue #163)
+* Server - [bug] Fixed database cleanup routine.
+
+1.3 (2014-09-17)
+================
+* Server - [bug] Fixed config build errors and display issues.
+* Server - Added dependency check for posix php module.
+* Server - [bug] Fixed install wizard for database checks as databases could not
+           be created through the installer. (Issue #72)
+* Server - [bug] Fixed menu badge counts.
+* Server - [feature] Added support for select2 jquery.
+* Server - [improvement] Gave the popups a facelift.
+* Server - [bug] Fixed an issue where changing personal user profile would remove
+           all user permissions.
+* Server - [improvement] Pagination is now dynamic. (Issue #85)
+* Both   - [feature] Added OS display support for Raspberry Pi. (Issue #108)
+* Server - [improvement] Added a check for the PHP filter module. (Issue #121)
+* Server - [improvement] Updated the login page.
+* Server - [bug] Fixed SSL mixed content. (Issue #131)
+* Server - [improvement] Added a check for the PHP json module. (Issue #133)
+* Server - [feature] Supports additional configuration previews. (Issue #130)
+
+1.2.3 (2014-06-04)
+==================
+* Server - [feature] Client auto upgrade minimum version are now dynamic.
+* Client - [bug] Fixed client auto upgrades. (Issue #103)
+* Client - [bug] Fixed PHP errors.
+* Server - Added dependency check for posix php module.
+
+1.2.2 (2014-05-16)
+==================
+* Both   - [bug] Fixed client upgrade errors. (Issue #94)
+
+1.2.1 (2014-05-15)
+==================
+* Both   - [bug] Fixed client upgrade versioning. (Issue #93)
+
+1.2 (2014-05-14)
+================
+* Server - Improved password strength settings description.
+* Server - Combined general and module settings in one menu.
+* Server - Added file extensions to all redirects and links.
+* Server - Changed font to Open Sans.
+* Server - CSS tweaks to improve UI on Linux systems. (Issue #86)
+* Server - [feature] Added framework for customizable UI record sorting for use
+           with all modules. (Issue #81)
+* Server - Cleaned up code.
+* Server - Help file links now open in the parent window instead of the popup.
+* Server - Created error page template.
+* Server - Added support for module options in fM options table.
+* Server - [feature] Redesigned how user capabilities are handled which also
+           supports user changes without the need for reauthentication.
+* Server - [bug] New user creations would not save the defined default module.
+* Server - Built-in users can edit more of their profile information.
+* Server - [feature] Added support for a flag to reset the authentication method
+           to 'none' in case of a lockout.
+* Server - [bug] Fixed a case where changing authentication method would throw
+           an error.
+* Both   - Added file extensions to all redirects and links.
+* Server - [feature] Redesigned menuing platform for more flexibility.  This
+           includes hiding menu items to users without proper access.
+* Server - [feature] Added functions to check for php max_input_vars. (Issue #87)
+* Server - Added help file link to issue tracker.
+
+1.1.2 (2014-04-03)
+==================
+* Server - [bug] Fixed password reset typo.
+* Server - [feature] Added favicon.
+* Server - [feature] Improved rewrite check. (Issue #76)
+
+1.1.1 (2014-03-24)
+==================
+* Server - [feature] Databases can now be created outside of the
+           installer. (Issue #72)
+* Server - Improved installer and upgrader error handling.
+* Server - [feature] Added function comments.
+* Server - [feature] Modules can now be uninstalled if they are deactivated and
+           there is an upgrade available.
+
+1.1 (2014-03-18)
+================
+* Server - [feature] Updated menu navigation which also added visual badges that
+           require user attention.
+* Server - [feature] Updated some visual effects.
+* Server - [feature] Client installs now ensure the module is active before
+           continuing the installation process.
+* Client - [feature] Detects if PHP CGI is running instead of CLI. (Issue #45)
+* Server - [feature] Added scroll to top link.
+* Server - [feature] Checks for the required .htaccess file and attempts to create
+           it if missing.
+* Server - [feature] Added ability to update to non-stable releases.
+* Server - [feature] Updated settings pages jquery.
+* Both   - [feature] Added support to auto-update client files. (Issue #53)
+* Client - [feature] Added an argument to display the version.
+
+1.0.2 (2013-12-31)
+==================
+* Server - [bug] Fixed issue where installer would report inability to write
+           the configuration file when the server directory had the
+           appropriate permissions.
+* Both   - [bug] Fixed an issue where client installation would fail when 
+           checking account details.
+
+1.0.1 (2013-12-24)
+==================
+* Client - [bug] Added more error handling in isolated install issues.
+* Server - [bug] Enabled update checks by default.
+
+1.0 (2013-12-16)
+================
+* Server - Removed enable/disable option for template user accounts.
+* Server - [bug] Can no longer delete the active template user account.
+* Server - Updated css and jquery animations.
+* Server - [feature] User password strength is now selectable in the settings.
+* Server - Improved logging of settings changes.
+* Server - [feature] Customizable app update checks.
+* Server - CSS tweaks.
+* Server - [feature] fM software update checks are now customizable.
+* Server - [feature] User accounts can now set their default module to use.
+* Server - [bug] Fixed an issue where clients would report as installed
+           when the installation was not complete.
+
+1.0-rc6-1 (2013-11-07)
+======================
+* Server - [bug] Fixed an issue were servers could not be added. (Issue #34)
+
+1.0-rc6 (2013-11-06)
+====================
+* Server - [feature] Server config builds now prompt for confirmation.
+* Server - [bug] Fixed installer password validity background display.
+* Server - [feature] Serial number generation now checks all module server tables
+           for unique values.
+* Server - [bug] Fixed some PHP errors.
+* Server - [bug] Ensures current module is active.
+* Client - [feature] Added install support for multiple modules.
+* Client - Improved Linux distro detection.
+
+1.0-rc5 (2013-10-16)
+====================
+* Server - [bug] Code clean up.
+* Server - [bug] Changed date items to date type.
+* Client - [bug] Fixed client sudoers line.
+* Server - [feature] Added more graphical elements.
+
+1.0-rc4 (2013-10-14)
+====================
+* Server - [bug] Fixed issue where modules could be 'upgraded' to an older version.
+* Server - [bug] Fixed issue with admin log searching.
+* Server - [feature] Module upgrades now inform user to upgrade client files
+           upon completion. (Issue #23)
+* Server - [feature] Added support to show/hide application errors.
+
+1.0-rc3 (2013-09-30)
+====================
+* Server - [bug] Improved validateNumber() javascript function.
+* Server - [feature] Added option to enforce HTTPS.
+
+1.0-rc2 (2013-09-18)
+====================
+* Server - [feature] Integrated installation and upgrade instructions into
+           the README. (Issue #18)
+* Server - [feature] Added additional OS-specific installation instructions.
+           (Issue #1)
+* Server - [feature] Updated some jquery functions.
+
+1.0-rc1 (2013-09-13)
+====================
+* Server - [feature] Added ability to change the displayed datetime format and
+           set the timezone.
+* Server - [feature] Added ad-hoc database backup functionality.
+* Server - [feature] Added LDAP authentication support. (Issue #10)
+* Server - [feature] Updated help files.
+
+1.0-b15 (2013-09-04)
+====================
+* Server - [feature] Added search capabilities to the admin logs page. (Issue #3)
+
+1.0-b14 (2013-09-03)
+====================
+* Server - [feature] Minor change to forgotton password email.
+* Server - [bug] Fixed an issue with module upgrades.
+* Server - [feature] Added more error checking.
+
+1.0-b13 (2013-08-28)
+====================
+* Server - [feature] Added Admin->Settings menu item to set authentication and
+           mailing methods.
+* Server - [feature] Can now disable authentication thus using only the default
+           super-admin user account.
+* Server - [feature] Set several tables to INNODB.
+* Server - [feature] Added support to email password reset links. (Issue #12)
+* Server - [feature] Added support for modules to have more granular user
+           permissions. (Issue #7)
+
+1.0-b12 (2013-08-23)
+====================
+* Server - [bug] Fixed database clean up bug.
+* Server - [feature] Supports pressing the ESC button to cancel a window.
+* Server - [bug] Fixed module installation output.
+* Server - [feature] Replaced logout button with account menu.
+* Server - [feature] Redesigned user management page.
+* Server - [security] Fixed an issue where user permissions could be removed
+           unintentionally during a password change.
+* Server - [security] Super-admins can no longer be demoted by non-super-admins
+           nor themselves. (Issue #11)
+* Server - [feature] Added option to enforce a user password change upon login.
+
+1.0-b11 (2013-08-21)
+====================
+* Server - [feature] Help now pops out.
+
+1.0-b10 (2013-08-14)
+====================
+* Server - [bug] Fixed post-upgrade redirection.
+
+1.0-b9 (2013-08-14)
+===================
+* Server - [feature] Decreased the update check interval.
+* Client - [feature] Added PHP version check.
+
+1.0-b7 (2013-08-13)
+===================
+* Server - [feature] Updated version checks.
+* Server - [bug] Improved installation to prevent duplicate entries.
+* Server - [feature] Improved application requirement checks. (Issue #1)
+* Server - [feature] Improved user creation and modification.
+
+1.0-b6 (2013-08-13)
+===================
+* Server - [feature] Added mod_rewrite check. (Issue #1)
+* Server - [bug] Fixed relative pathing issue.
+* Server - [feature] User no longer gets redirected to the dashboard after
+           authentication.
+
+1.0-b5 (2013-08-10)
+===================
+* Server - [feature] Added module version checks.
+* Server - [feature] Improved upgrade process.
+
+1.0-b4 (2013-08-09)
+===================
+* Initial release.

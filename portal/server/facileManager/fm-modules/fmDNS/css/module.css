@@ -1,0 +1,140 @@
+tr.import_swap span,
+td#row_actions > .fa-refresh {
+	cursor: pointer;
+	color: #3a62a3;
+}
+
+tr.import_swap input:not([type="checkbox"]) {
+	display: none;
+	font-size: 11px;
+}
+
+tr.import_swap select {
+	display: none;
+}
+
+tr.import_swap td {
+	white-space: nowrap;
+}
+
+#server_update_port_style,
+#soa_template_name {
+	display: none;
+}
+
+.value_placeholder {
+	white-space: nowrap;
+}
+
+p.soa_import {
+	width: 100%;
+	font-size: 11px;
+	margin-top: 0;
+}
+p.soa_import span {
+	float: right;
+	padding-right: 5px;
+}
+
+#configtypesmenu > #recordmenu span {
+	padding: 2px 5px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#configtypesmenu > #recordmenu > ul > li > a:hover,
+#configtypesmenu > #recordmenu > ul > li > a > span:hover,
+#configtypesmenu > #recordmenu > ul > li:hover > a {
+	background-color: #464646;
+	color: #fff;
+}
+#configtypesmenu > #recordmenu > ul > li:hover {
+	background-color: #464646;
+	border-radius:5px 5px 0 0;
+}
+#recordmenu { display:block; padding:0; margin: -6px 0 0 4px; }
+#recordmenu > ul {list-style:inside none; padding:0; margin:0;}
+#recordmenu > ul > li {list-style: none; padding:3px 1em 1px 0; margin:0; display:block; position:relative;}
+#recordmenu > ul > li > a{ outline:none; display:block; position:relative; text-decoration:none; padding-bottom: 6px; }
+#recordmenu > ul > li.has-sub > a:before{ content:''; position:absolute; top:10px; right:-.5em; border:4px solid transparent; border-top:4px solid #000; }
+#recordmenu > ul > li.has-sub:hover > a:before{top:10px; border-top: 4px solid #fff;}
+#recordmenu ul li.has-sub:hover > a:after{top:0; bottom:0;}
+#recordmenu ul li.has-sub:hover > ul, #recordmenu ul li.has-sub:hover > div{display:block;}
+#recordmenu ul li > ul {
+	display:none; width:auto; position:absolute; top:2.2em; right: 0; padding:2px 0; background-color:rgba(70,70,70,0.95);
+	border-radius:0 0 5px 5px;
+	moz-box-shadow: rgba(10,10,10,0.4) 5px 15px 40px -5px;
+	-webkit-box-shadow: rgba(10,10,10,0.4) 5px 15px 40px -5px;
+	-khtml-box-shadow: rgba(10,10,10,0.4) 5px 15px 40px -5px;
+	box-shadow: rgba(10,10,10,0.4) 5px 15px 40px -5px;
+	z-index: 6;
+}
+#recordmenu > ul > li > a:hover {
+	background: #e5e5e5;
+}
+#recordmenu > ul > li > a.current:hover {
+	background: #464646;
+}
+#recordmenu ul li > ul{width:150px;}
+#recordmenu ul li > ul li{display:block; list-style:inside none; padding:0; margin:0; position:relative;}
+#recordmenu ul li > ul li a{ outline:none; display:block; position:relative; margin:0; padding:8px 20px; font:10pt Arial, Helvetica, sans-serif; color:#fff; text-decoration:none; }
+#recordmenu > ul > li > ul > li a:hover{ background-color:rgba(100,100,100,0.95); color: #fff; };
+
+.form-table.zone-form,
+.form-table.zone-template-form {
+	font-size: 14px;
+	white-space: normal;
+}
+
+.form-table.zone-form input[type=text],
+.form-table.zone-template-form input[type=text] {
+	width: 24em;
+}
+
+.form-table.zone-form p,
+.form-table.zone-template-form p {
+	font-size: 8pt;
+}
+
+.form-table td span.note {
+	font-size: 11px;
+	position: relative;
+	top: 3px;
+}
+
+.soa-template-dropdown strong {
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
+.display_results > tbody > tr > td > span {
+	font-style: italic;
+}
+
+#define_forwarders,
+#define_masters {
+	margin-top: .5em;
+}
+#define_forwarders > p {
+	margin: 7px 0;
+}
+
+#clone_override p {
+	margin: 5px 0;
+}
+
+td > .mini-icon {
+	margin-left: 7px;
+}
+
+#table_edits > tbody > tr.subelements > td {
+	vertical-align: top;
+}
+
+table.form-table > tbody > tr.dnssec-key-addl-options {
+	display: none;
+}
+.add_records {
+	padding: 5px 6px 5px 2em;
+}
