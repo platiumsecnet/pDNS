@@ -1,0 +1,98 @@
+#fmfw_config_servers, #fmfw_objects, #fmfw_services, #fmfw_time,
+#fmfw_config_policies {
+	display: none;
+}
+
+.tcp-flags th, .tcp-flags td {
+	width: 1em;
+	font-size: 11px;
+	padding: 0;
+}
+
+.tcp-flags th, .list-toggle th {
+	text-align: center;
+}
+
+.tcp-flags input[type="checkbox"] {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.list-toggle input[type="button"] {
+	padding: 3px 8px;
+	margin-bottom: 5px;
+}
+.list-toggle select {
+	width: 150px;
+	height: 100px;
+	overflow: scroll;
+}
+.list-toggle td {
+	text-align: center;
+	vertical-align: middle;
+}
+.list-toggle th, .list-toggle td {
+	font-size: 11px;
+	padding: 0;
+}
+
+.list-toggle td.switch-buttons {
+	padding: 5px;
+}
+
+table.legend {
+	margin: 3em 0;
+	font-size: 11px;
+}
+table.legend tr td {
+	padding: 2px 6px;
+}
+table.legend tr td span {
+	display: block;
+	margin-top: -15px;
+	margin-left: 18px;
+}
+
+p.checkbox_desc {
+	font-size: 10px;
+	margin-top: 0;
+	margin-left: 3px;
+}
+
+.form-table.policy-form td label {
+	white-space: normal;
+}
+
+.pass {
+	color: #1b8725;
+}
+.block {
+	color: #CB3739;
+}
+.reject {
+	color: #e19419;
+}
+.log {
+	color: #4e65e0;
+}
+
+#stack-label {
+	font-weight: bold;
+	padding: 3px;
+	font-size: 8pt;
+}
+select.select-stack {
+	width: 150px;
+	height: 200px;
+	margin-top: 5px;
+}
+select.select-stack option {
+	padding: 3px;
+}
+table.grab tbody tr td.options {
+	white-space: nowrap;
+	text-align: right;
+}
+table.grab tbody tr td.options i {
+	margin-left: 4px;
+}

@@ -1,0 +1,831 @@
+3.4.1 (2019-10-16)
+==================
+* Server - [bug] Fixed an issue where the view order could not be changed. (Issue #464)
+* Server - [bug] Fixed zone file names during reloads. (Issue #468)
+
+3.4.0 (2019-10-01)
+==================
+* Server - [bug] Fixed zone imports for lines without a record name. (Issue #445)
+* Server - [bug] Fixed master clause deletions when no address lists are
+           associated with it. (Issue #447)
+* Server - [bug] Ensured multi-line record values do not contain extra spaces.
+* Server - [bug] Fixed jquery to highlight records to be updated when the multi-line
+           values are modified.
+* Server - [bug] Fixed remote server creation after a fresh installation.
+* Server - [bug] Fixed dynamic zone loading for reverse zones. (Issue #449)
+* Server - [feature] Added support for TLSA and OPENPGPKEY RR types. (Issue #439)
+* Server - [bug] Fixed PHP error during config generation via cron. (Issue #454)
+* Both   - [security] Fixed an issue where local privileges could be escalated
+           to root. (Found and reported by Arturs Danilevics, Oskars Vegeris, and
+           Ivars Vids)
+* Server - [security] Ensured header() calls are not skipped. (Found and reported
+           by Arturs Danilevics, Oskars Vegeris, and Ivars Vids)
+* Server - [feature] Added support to define the zone filename. (Issue #456)
+* Server - [bug] Fixed an issue where ACLs could not be deleted. (Issue #458)
+
+3.3.4 (2019-05-17)
+==================
+* Server - [bug] Fixed support for empty forwarders zone option. (Issue #443)
+* Server - [bug] Updated which zone options are available based on zone type.
+* Server - [bug] Fixed unset variable during configuration builds.
+* Server - Updated default named.root file.
+* Server - [bug] Fixed Rate Limit display and zone configuration when selecting
+           a zone.
+* Server - [bug] Added missing configuration options.
+
+3.3.3 (2019-03-29)
+==================
+* Server - [bug] Fixed client installations from an install of v3.3.0-3.3.2. (Issue #438)
+
+3.3.2 (2019-03-20)
+==================
+* Server - [bug] Fixed server menu badge counts with respect to remote
+           servers. (Issue #218)
+* Server - [bug] Fixed an issue where zone filtering was not available to
+           users without the super-admin privilege. (Issue #436)
+* Server - [bug] Fixed an issue where users with zone-management privileges
+           could not modify additional zone options.
+* Server - [bug] Fixed table formatting for users with view-only privilege.
+* Server - [bug] Fixed installs and upgrades with PHP 7.3.x. (Issue #436)
+* Server - [bug] Fixed an issue where serial numbers for servers change after
+           editing the server details. (Issue #437)
+
+3.3.1 (2019-03-17)
+==================
+* Server - [bug] Fixed SOA creations. (Issue #435)
+
+3.3 (2019-03-16)
+================
+* Client - [bug] Fixed start-up script location for Debian-based and Redhat-based
+           systems. (Issue #426)
+* Server - [bug] Fixed issue where TSIG keys could not be selected in certain
+           options. (Issue #429)
+* Server - [improvement] Cleaned up redundant code.
+* Server - [improvement] Made the DS RRset available to view and copy. (Issue #419)
+* Server - [bug] Fixed zone filtering. (Issue #430)
+* Server - [bug] Fixed the display of dynamic zone and dnssec options while
+           editing zone details.
+* Server - [improvement] Updated default named.root file.
+* Server - [improvement] Minor UI changes for more consistency.
+* Client - [improvement] Added support for Scientific Linux. (Issue #431)
+* Server - [bug] Fixed ACL display and ability to edit the entries. (Issue #432)
+* Server - [bug] Fixed Masters display and ability to edit the entries.
+* Server - [bug] Fixed the masters config when an address list is another
+           masters list.
+* Server - [bug] Fixed zone imports where delegated NS records are used in
+           reverse zones. (Issue #378)
+* Server - [improvement] Added record import for additional RR types.
+* Server - [bug] Fixed dynamic zone imports. (Issue #433)
+* Server - [feature] Added full support for the servers clause. (Issue #218)
+* Server - [improvement] CSS and icon changes.
+
+3.2.1 (2018-12-15)
+==================
+* Server - [bug] Fixed text.
+* Server - [bug] Language fix.
+* Server - [bug] Fixed zone filters to include "All Zones" and "All Groups".
+* Server - [bug] Fixed PHP error. (Issue #423)
+* Server - [bug] Fixed display-process-all functionality.
+
+3.2 (2018-10-26)
+================
+* Server - [bug] Fixed a fatal error during client interactions.
+* Server - [bug] Fixed automatic PTR creations when using a class A reverse
+           zone. (Issue #408)
+* Server - [bug] Fixed support for multiple NAPTR record values. (Issue #409)
+* Server - [improvement] Added support for additional logging categories.
+* Server - [feature] Added support for the masters clause. (Issue #401)
+* Server - [bug] Fixed dynamic update record deletions. (Issue #413)
+* Server - [improvement] Added support to automatically create PTR records
+           during the import wizard. (Issue #402)
+* Server - [bug] Fixed PHP errors.
+* Server - [improvement] Zones page now keeps the page header at the top.
+
+3.1.2 (2017-12-22)
+==================
+* Server - [bug] Fixed zone groups. (Issue #375)
+
+3.1.1 (2017-12-14)
+==================
+* Server - [bug] Fixed upgrade process. (Issue #404)
+
+3.1.0 (2017-12-13)
+==================
+* Client - [improvement] Fixed fetching through proxy server. (Issue #399)
+* Client - [bug] Root hint zone is now included when recursion is allowed only
+           within certain views. (Issue #398)
+* Server - [bug] Fixed an issue where views for specific servers would be
+           created for all servers.
+* Server - [feature] View order can now be changed. (Issue #397)
+* Server - [bug] Fixed issue where config options for Rate Limit and RRSet were
+           incorrect.
+* Server - [bug] Fixed error messages regarding dynamic zones.
+* Server - [feature] Added support for zone groups. (Issue #375)
+* Server - [improvement] Pagination is now displayed even with no items.
+* Server - [bug] Fixed display of key item count.
+* Server - [bug] Zone cloning icon is no longer visible on cloned zones when
+           a restricted account is used.
+* Server - [bug] Fixed option type validation.
+* Server - [improvement] Zones based on templates can now be associated with
+           views independent of the template. (Issue #384)
+* Server - [improvement] Popup boxes now disable body scrolling.
+* Server - [improvement] Creating CNAME, NS, MX records with a null value now
+           implies the domain name. (Issue #390)
+
+3.0.4 (2017-10-10)
+==================
+* Server - [bug] Fixed dashboard text.
+* Server - [feature] Added support for using a proxy server. (Issue #388)
+* Server - [bug] Removes extra whitespace from new zone names. (Issue #394)
+
+3.0.3 (2017-08-07)
+==================
+* Server - [bug] Fixed key name definitions when associated with a view. (Issue #385)
+
+3.0.2 (2017-07-19)
+==================
+* Server - [bug] Fixed the auto-split of long TXT records adding a space only
+           when necessary. (Issue #171)
+
+3.0.1 (2017-07-06)
+==================
+* Server - [bug] Fixed the auto-split of long TXT records to include a space.
+* Server - [improvement] Updated German translation.
+
+3.0 (2017-06-22)
+================
+* Server - [bug] Fixed the SOA during bulk zone imports. (Issue #377)
+* Server - [bug] Fixed the upgrade process.
+* Server - [bug] Fixed PHP error. (Issue #374)
+* Server - [feature] Added support to automatically generate a DS RR. (Issue #285)
+* Client - [bug] EL chroot mounts now include fmDNS files. (Issue #346)
+* Server - [improvement] Added bulk actions to several pages.
+* Server - [improvement] Database errors now get displayed if the Show Errors
+           setting is enabled.
+* Both   - [improvement] Code clean up.
+* Server - [bug] Slave zones now work with multiple views. (Issue #367)
+* Server - [bug] Changing to a different template for a zone, the serial number
+           was not updating thus slaves would not get updated. (Issue #368)
+* Server - [improvement] Added an icon on the zones pages for faster access to
+           the zone options.
+* Both   - [feature] Dynamic zones are now supported with servers updated via
+           http/https. (Issue #90)
+* Server - [improvement] Better error messages surrounding dynamic zones. (Issue #370)
+* Server - [improvement] Added locale number formatting.
+* Server - [improvement] Code changes to better reference shared classes.
+* Server - [bug] Zones based on templates would be incorrectly logged during
+           zone reloads.
+* Server - [feature] Added support for DNSSEC. (Issue #285)
+* Server - [improvement] Utilizes response error formatting.
+* Server - [improvement] Pagination is added to all pages.
+* Server - [improvement] Code clean up.
+* Server - [feature] Added support for the CAA RR. (Issue #361)
+* Server - [improvement] BIND time formats are allowed for TTL and SOA values.
+* Server - [improvement] Added support for additional SSHFP algorithms and
+           certificate types. (Issue #355)
+* Server - [bug] Unprivileged users could see the ACL add new button.
+* Server - [bug] Fixed rate-limit options when only limits for domains are
+           specified.
+* Server - [improvement] Language changes.
+* Server - [improvement] Added the option to sort zones hierarchically. (Issue #278)
+* Server - [improvement] PTR RRs are better linked with the A record. (Issue #277)
+* Server - [feature] Added support for statistics-channels. (Issue #352)
+* Server - [improvement] Unset large variables after use to free up system
+           resources.
+* Server - [bug] Fixed display of available zones when the user is restricted to
+           a cloned zone. (Issue #350)
+* Server - [improvement] Added item name to the delete confirmations. (Issue #185)
+* Server - [feature] Added support for DHCID, DLV, and DS resource records.
+* Server - [feature] Added support for more BIND configuration options
+           including rrset-order, 9.10, and 9.11 options. (Issue #336)
+* Server - [improvement] Configuration options may now display the minimum
+           version of BIND required to use the option.
+* Server - [feature] Added support for dynamic zones. (Issue #90)
+* Server - [bug] Added missing translation text and removed duplicates.
+* Server - [feature] Added support to import a BIND-compatible zone dump file
+           to make migrations to fmDNS easier. (Issue #96)
+* Server - [improvement] Zone previews now show all available RRs regardless
+           of DNS server version hosting the zone.
+* Server - [bug] address_match_element values now strip any inputed semi-colons.
+* Server - [feature] Use mysqli functions where available. (Issue #343)
+* Server - [improvement] Users limited to specific zones and the capability to
+           create new zones now can view their newly created zones. (Issue #339)
+
+2.2.6 (2016-09-22)
+==================
+* Server - [bug] Added missing dnssec-validation value. (Issue #347)
+* Server - [improvement] When limiting zone access to a user or group, the view
+           is appended to the name. (Issue #349)
+* Client - [bug] EL7-based systems use named-chroot.service for chroot
+           environments. (Issue #345)
+
+2.2.5 (2016-08-23)
+==================
+* Server - [bug] Fixed named configuration and zone file checks. (Issue #333)
+* Client - [bug] Fixed versioning issue during upgrades.
+
+2.2.4 (2016-07-21)
+==================
+* Server - [bug] Fixed an issue where address_match_element options would not
+           accept any input. (Issue #329)
+* Server - [improvement] AJAX now redirects to login page when fM and module
+           database updates are required.
+* Server - [bug] Fixed an issue where SOA serial numbers were not incrementing
+           for cloned zones. (Issue #330)
+* Server - [bug] Fixed error messaging during zone configuration builds.
+* Both   - [security] Improved permission support for files installed by the
+           client. (Issue #320)
+
+2.2.3 (2016-06-14)
+==================
+* Server - [bug] Fixed incorrect use of DNAME with zone templates. (Issue #321)
+* Server - [bug] Fixed forwarder IP entries for forward zones. (Issue #324)
+
+2.2.2 (2016-05-05)
+==================
+* Client - [bug] Zone reloads via HTTP(s) would not increment the SOA serial
+           number. (Issue #315)
+* Server - [bug] Zones would not proper reload when multiple servers were selected
+           to host the zone. (Issue #315)
+
+2.2.1 (2016-04-29)
+==================
+* Server - [bug] ACLs were not properly upgraded to the new schema. (Issue #313)
+* Server - [bug] New ACLs could not be created.
+* Server - [improvement] CSS fix on ACL table.
+* Server - [bug] Zone file import would incorrectly handle semi-colons in the
+           record value as comments. (Issue #311)
+* Server - [bug] New ACL entries would not be included in the server config.
+
+2.2 (2016-04-24)
+================
+* Client - Upgrading requires a manual installation using the steps in README.md.
+* Server - [bug] Dump and clear cache tools now honor the server selection.
+* Both   - [improvement] Cleaned up duplicate functions to simplify code.
+* Client - [improvement] Client app is renamed to client.php to standardize
+           all module client apps.
+* Server - [improvement] Updated help file.
+* Server - [bug] Fixed audit logging of zone edits.
+* Server - [feature] Added views menu to config options page. (Issue #262)
+* Server - [bug] When deleting servers or server groups, associated configs
+           were not being deleted.
+* Server - [feature] Reworked the ACL configuration page to support additional
+           comments on each ACL element. (Issue #206)
+* Server - [bug] Empty ACLs would break named.conf syntax.
+* Server - [bug] Under certain browsers, the jQuery would not execute. (Issue #298)
+* Server - [improvement] Server configuration previews are now available with
+           disabled servers.
+* Server - [bug] Zone templates can now be deleted. (Issue #300)
+* Server - [improvement] Forward zones no longer enforce forward servers being
+           specified since empty forwarders are valid. (Issue #299)
+* Server - [improvement] Zone file import checks for singleton RR and will
+           tick the 'Skip Import' box. (Issue #280)
+* Server - [feature] User permissions can now be granular on cloned zones. (Issue #272)
+* Server - [improvement] Reverse zone creation now supports RFC2317 and RFC2181
+           names. (Issue #284)
+* Server - [improvement] Added support for include statements to be in named.conf
+           outside of a clause. (Issue #301)
+* Server - [bug] Creating non-master zones triggers server config builds. (Issue #310)
+* Server - [improvement] Added French translation.
+
+2.1.8 (2016-03-24)
+==================
+* Server - [bug] Zones based on a template were not honoring the DNS server
+           selection. (Issue #296)
+
+2.1.7 (2016-03-11)
+==================
+* Server - [bug] Enclosed database references in backticks in SQL statements. (Issue #290)
+
+2.1.6 (2016-01-24)
+==================
+* Server - [bug] ACL names that contain spaces are now quoted. (Issue #281)
+
+2.1.5 (2016-01-08)
+==================
+* Server - [bug] Editing quoted_string options would not show current value.
+* Server - [bug] Record validation regarding singleton RR types now considers
+           record status. (Issue #274)
+
+2.1.4 (2015-12-10)
+==================
+* Server - [bug] Fixed include statement within zone clause. (Issue #270)
+
+2.1.3 (2015-12-08)
+==================
+* Server - [bug] RR updates would incorrectly append the domain. (Issue #269)
+* Server - [bug] Fixed config builds and zone reloads. (Issue #269)
+* Client - [bug] Fixed client upgrade loop.
+
+2.1.2 (2015-12-07)
+==================
+* Server - [bug] Clients would not update the database during installation
+           (result of adding #223).
+* Server - [bug] fM defined temporary directory was not always used.
+* Server - [bug] Fixed PHP errors with server configuration builds. (Issue #268)
+* Server - [bug] Configuration options containing $ROOT would not be stored
+           properly on the clients.
+* Server - [improvement] Overall performance improvements. (Issue #224)
+
+2.1.1 (2015-12-05)
+==================
+* Server - [bug] Fixed client installations. (Issue #265)
+
+2.1 (2015-12-02)
+================
+* Server - [improvement] Record validation no longer allows a CNAME RR at the
+           zone level.
+* Server - [feature] Record validation now ensures singleton type RR. (Issue #208)
+* Server - [feature] Added support for automatically creating PTR records in
+           reverse subnet maps. (Issue #195)
+* Server - [improvement] Updated default SOA values to RFC1912 recommendations.
+* Server - [improvement] Updated default named.root file.
+* Server - [improvement] Minor UI edits.
+* Server - [improvement] Improved performance.
+* Server - [bug] Included missing translation text.
+* Server - [improvement] Zone import tool no longer compares record comment to
+           determine if the record is a duplicate.
+* Server - [bug] Fixed read-only SRV and TXT record display.
+* Server - [bug] Fixed address_match_element parsing. (Issue #237)
+* Server - [feature] Added missing response-policy config option. (Issue #229)
+* Server - [feature] Added support for include statements. (Issue #123)
+* Server - [improvement] Read-only zone record display now stretches to the bottom
+           of the browser window.
+* Server - [feature] Added user group support. (Issue #211)
+* Server - [bug] Slave zone directory now gets created if required. (Issue #241)
+* Server - [improvement] Replaced Add New image with Font Awesome icon.
+* Server - [improvement] Hostnames can no longer contain an underscore (_) or 
+           start with a hyphen (-). (Issue #254)
+* Server - [bug] Fixed RR updates as record append option would default to 'no'.
+* Server - [improvement] Minor performance improvements. (Issue #224)
+* Server - [feature] Added support for IPv6 CIDR notation. (Issue #252)
+* Server - [feature] Added support for the NAPTR RR. (Issue #248)
+* Server - [bug] When specifying a server or group override for a config parameter
+           the appropriate servers would not be flagged for a config build. (Issue #257)
+* Server - [bug] Logging channels and categories would always be defined for all
+           servers regardless of server/group selection.
+* Server - [bug] Updating SOA templates did not set the reload flag for the
+           associated zones. (Issue #259)
+* Server - [security] Users restricted to specific zones can no longer clone
+           zones they do not have access to.
+
+2.0.3 (2015-06-29)
+==================
+* Server - [bug] Fixed upgrade routine from v1.2.3. (Issue #230)
+
+2.0.2 (2015-05-27)
+==================
+* Both   - [bug] Fixed BIND version compare at client install time. (Issue #212)
+* Server - [bug] Included missing translation text.
+* Server - [improvement] Added support for systemd in client rc scripts.
+           (Issues #212 #215)
+* Server - [bug] Dashboard summary now excludes template zones and records. (Issue #212)
+* Server - [bug] Fixed server override capabilities for server options.
+* Server - [bug] Fixed some PHP errors.
+
+2.0.1 (2015-05-03)
+==================
+* Server - [security] Unauthorized users can no longer see the zone config
+           via the preview button. (Issue #210)
+* Server - [bug] Fixed template menus and page access.
+* Server - [bug] Fixed an issue where zones based on templates could not be reloaded.
+* Client - [bug] Fixed an issue where zone files do not get purged.
+
+2.0 (2015-04-27)
+================
+* Server - [feature] Added the ability to use clones in a split-view environment.
+           (Issue #165)
+* Server - [feature] Added support for keys in address_match_elements. (Issue #157)
+* Server - [feature] Added ability to reload all zones with a single click on the
+           top menu bar. (Issue #116)
+* Server - [feature] New zones can now be created with the zone import wizard.
+* Server - [improvement] Zone imports now check for duplicate records with parent
+           zone when importing to a cloned zone.
+* Server - [bug] Fixed handling of hint zone writes when named.root is not writeable.
+* Server - [feature] Added searching functionality. (Issue #149 #188)
+* Server - [improvement] Added graphical representation to skipped records in
+           the cloned zone view.
+* Server - [improvement] Can now edit cloned zone details.
+* Server - [improvement] Skipped records are no longer displayed to read-only
+           accounts.
+* Server - [feature] Added support for resource rate limiting (Issue #118).
+* Server - [bug] Records skipped in a cloned zone are now deleted from the
+           fm_dns_records_skipped database.
+* Server - [feature] Added ability to filter zone listing by views.
+* Server - [feature] Added support for server grouping for use with master and
+           slave name servers. (Issue #148)
+* Server - [bug] Fixed bulk action checkbox logic.
+* Server - [bug] Fixed issue where zones could not be updated when there are no
+           views defined.
+* Server - [security] Added ability to enable/disable automatic client
+           registration in the database. (Issue #122)
+* Server - [feature] Added the option to use DNAME resource records for cloned
+           zones with a per-zone override. (Issue #169)
+* Server - [bug] Fixed issue where multiple SOA templates could be marked as default.
+* Server - [feature] Added support for zone templates. (Issue #154)
+* Server - [feature] Added i18n support (Issue #106).
+* Server - [improvement] jQuery is now used to enable/disable items.
+* Server - [bug] Fixed channel selection within logging category definition.
+* Server - [feature] Supports TXT records larger than 255 characters. (Issue #171)
+* Server - [feature] Automatically updates PTR record when updating an existing
+           A record and ticking 'Create PTR' box. (Issue #129)
+* Server - [bug] Fixed address_match_element display during build config.
+* Server - [improvement] Appending domains in SOA records for reverse zones
+           are no longer allowed. (Issue #176)
+* Server - [improvement] Added better support for long TXT RR (introduced in
+           2.0-beta1). (Issue #171 #179)
+* Server - [feature] DNS server version is displayed on the servers page. (Issue #180)
+* Server - [improvement] Swapped /tmp for sys_get_temp_dir(). (Issue #164)
+* Server - [improvement] SSH keys can be saved if the file already exists. (Issue #164)
+* Server - [improvement] Incorporated mod_headers to save bandwidth. (Issue #164)
+* Server - [bug] The correct comments for views and config options are displayed
+           when defining a server override.
+* Server - [bug] Sanitized view names that contain illegal system characters for
+           filenames.
+* Server - [improvement] Added button to clone a zone.
+* Server - [improvement] Zone clones are now sorted by name.
+* Server - [improvement] CNAME records are handled better regarding domain appending.
+* Client - [feature] Server reloads now support freeze and thaw. (Issue #183)
+* Server - [feature] Zones that need attention can be filtered. (Issue #188)
+* Server - [bug] Fixed zone reloads via cron for cloned zones.
+* Server - [improvement] Stores full SOA serial number in the database.
+* Server - [bug] ACLs and keys can no longer be disabled or deleted if they are
+           used.
+* Server - [bug] Changing SOA templates would not enforce a zone reload. (Issue #202)
+* Server - [bug] Removed zones and servers that need attention from unprivileged
+           users. (Issue #204)
+* Server - [improvement] ACLs and predefined address_match_elements can now be
+           referenced in the negated format.
+
+1.3.6 (2015-02-09)
+==================
+* Server - [bug] Fixed address_match_element parsing. (Issue #173).
+
+1.3.5 (2015-01-08)
+==================
+* Server - [improvement] Added support to change the forward option within the
+           zone definition. (Issue #168)
+* Server - [improvement] Additional zone options can now be configured for slave
+           zones.
+
+1.3.4 (2014-11-17)
+==================
+* Server - [bug] Fixed server menu badge counts to accurately reflect numbers when
+           limiting user access.
+* Server - [improvement] Updated view display for keys config.
+* Both   - [bug] Fixed client upgrade problem introduced in 1.3.3.
+
+1.3.3 (2014-11-10)
+==================
+* Server - [bug] Fixed zones display when limiting user access. (Issue #162)
+* Server - [bug] Fixed zone menu badge counts to accurately reflect numbers when
+           limiting user access.
+
+1.3.2 (2014-11-05)
+==================
+* Server - [bug] Fixed CNAME with @ value could not be created. (Issue #161)
+
+1.3.1 (2014-10-13)
+==================
+* Server - [improvement] No longer default to creating a SOA template. (Issue #155)
+* Server - [feature] Added ability to define default SOA. (Issue #155)
+* Server - [feature] Added BIND 9.10 support key algorithms. (Issue #156)
+
+1.3 (2014-09-17)
+================
+* Client - [bug] Fixed PHP error when attempting to purge files.
+* Server - [improvement] The zone records type menu now shows only the record
+           types that contain records for the zone and hides the other types.
+* Server - [bug] Fixed building of cloned zones.
+* Server - [improvement] Formatted zone file record output better.
+* Server - [security] Fixed issue where unprivileged users could reload zones.
+* Server - [improvement] Added zone record count to zone listing.
+* Server - [bug] Fixed config build errors and display issues.
+* Server - [bug] Allow IPv6 addresses in ACLs. (Issue #146)
+* Server - [bug] Fixed config options inputs and error messages.
+* Server - [bug] Fixed zone imports.
+* Server - [bug] Fixed check-names zone syntax.
+* Server - [improvement] Changed order of named.conf sections.
+* Server - [feature] Automatically includes the hint zone. (Issue #104)
+* Server - [feature] Adds localhost zones at install time. (Issue #105)
+* Server - [feature] Added support for select2 jquery.
+* Server - [feature] Added support for controls. (Issue #102)
+* Server - [improvement] Fixed scrolling of named check window.
+* Server - [improvement] Gave the popups a facelift.
+* Server - [feature] Added pagination support. (Issue #85)
+* Server - [improvement] Fixed sort order of several pages. (Issue #117)
+* Server - [feature] Removed support for manual zone serial number entries.
+* Server - [feature] Automatically create missing reverse zone when creating PTR
+           records from A records page. (Issue #115)
+* Server - [improvement] Rewrote record validation and adds better support for
+           CNAME creations (Issue #111).
+* Server - [feature] Added support for SSHFP RR. (Issue #84)
+* Server - [bug] Fixed an issue where zone creations would fail without an error.
+* Both   - [feature] Added support to dump and clear cache. (Issue #112)
+* Server - [bug] Fixed server overrides. (Issue #132)
+* Server - [improvement] Cleaned up some code.
+* Both   - [feature] Added support to define chroot directory. (Issue #92, #134)
+* Server - [feature] Added support for SOA templates. (Issue #114)
+* Server - [bug] Fixed the servers menu badge count. (Issue #139)
+* Server - [bug] Fixed an issue where zones could still be reloaded after
+           updating the zone configuration. (Issue #141)
+* Server - [feature] Preview of single zone files is now possible. (Issue #130)
+* Server - [improvement] Redesigned zone configuration and added support for
+           configuration options at the zone level.
+* Server - [improvement] All tables are now sortable. (Issue #127)
+* Server - [feature] Added IDN display support. (Issue #124)
+* Server - [feature] Added support to automatically create PTR records for
+           existing A records. (Issue #129)
+* Server - [bug] Fixed zone name validation to support the underscore (Issue #143)
+
+1.2.5 (2014-06-04)
+==================
+* Server - [feature] Client auto upgrade minimum version is now dynamic.
+
+1.2.4 (2014-05-30)
+==================
+* Server - [improvement] Added table index to improve queries. (Issue #96)
+* Client - [bug] Fixed a dependency check. (Issue #98)
+* Server - [bug] Fixed cron zone reloads (Issue #98)
+
+1.2.3 (2014-05-16)
+==================
+* Server - [bug] Fixed include/exclude of records in cloned domains.
+* Server - [bug] Fixed CERT updates when key tag is blank.
+* Server - [bug] Fixed fatal PHP errors found with PHP 5.5. (Issue #95)
+* Server - [feature] Added helpful note when adding servers via UI.
+
+1.2.2 (2014-05-15)
+==================
+* Server - [bug] Fixed issue where zone reloads would not happen. (Issue #93)
+
+1.2.1 (2014-05-15)
+==================
+* Both   - [bug] Fixed client upgrade versioning. (Issue #93)
+
+1.2 (2014-05-14)
+================
+* Server - [bug] Fixed a SQL error when enabling/disabling keys.
+* Server - [feature] Organizes zone files in respective directories.
+           (Upgrades will force server config builds.) (Issue #75)
+* Server - [feature] Added support for bulk server config builds
+           and zone reloads. (Issue #71)
+* Server - [bug] Fixed a page title.
+* Server - [feature] Added customizable UI record sorting. (Issue #81)
+* Server - [feature] Added support for the Hesiod class.
+* Server - [feature] Added support for additional RR types. (Issue #84)
+* Server - [bug] Improved server name resolution for building
+           server key definitions. (Issue #80)
+* Server - [feature] Separated A and AAAA records.
+* Server - [bug] Fixed config options could not be updated.
+* Server - [bug] Fixed incorrect redirection under certain circumstances.
+* Both   - Added file extensions to all redirects and links.
+* Server - [feature] More than eight records can be added now.
+* Server - [bug] Fixed an issue where record admins could not view the records
+           for a zone without a SOA or NS records.
+* Server - Updated alert messages for misssing SOA and NS records.
+* Server - [bug] Removed non-master zones from the 'clone of' list.
+* Server - [feature] Disabled records now have the proper css class assigned.
+* Server - [feature] Added support to modify cloned zones. (Issue #65)
+* Server - [bug] Added missing logging of clone zone creations.
+* Server - [bug] Adding cloned zones now requires a server config build.
+* Server - [bug] Fixed an issue where cloned zones may not get built.
+* Server - Cleaned up code.
+* Server - Updated help file content to reflect new features.
+* Server - [feature] Added ability to automatically add server config option
+           overrides at client install time.  Specifically for pid-file.
+           (Issue #79)
+* Server - [security] Fixed an issue where unpriviledged users could save module
+           settings.
+* Server - Moved module options into fM options table.
+* Server - Added server client upgrade status to the dashboard.
+* Server - Uses new fM user capabilities backend.
+* Server - [security] Fixed issue where users could import records into zones
+           without having proper rights.
+* Server - [security] Fixed issue where users could automatically add PTR records
+           into zones without having proper rights.
+* Server - Uses new fM menu platform.
+* Server - [bug] Records could not be added or imported due to high number of
+           submitted variables (php max_input_vars).  Added check for usability.
+           (Issue #87)
+* Server - [bug] Fixed display of comments containing carriage returns.
+
+1.1.3 (2014-04-15)
+==================
+* Server - [bug] Fixed AAAA record imports from zone file. (Issue #78)
+* Server - [security] Fixed an issue where record admins could update zone
+           information.
+
+1.1.2 (2014-04-04)
+==================
+* Server - [bug] Fixed zone delegation support.
+
+1.1.1 (2014-03-24)
+==================
+* Server - Improved installer and upgrader error handling.
+* Server - [bug] Fixed settings page typo.
+* Server - [bug] Zones will now reload properly when using split
+           views. (Issue #77)
+* Server - [bug] Fixed an issue where servers could not get built after
+           new zone creations.
+
+1.1 (2014-03-18)
+================
+* Server - [feature] Added visual effects for things that need user attention.
+* Server - [feature] Comments can now be added to views, acls, keys,
+           options, and logging configs. (Issue #52)
+* Server - [bug] Improved UI logging of logging channels and categories
+           updates.
+* Server - [bug] Fixed PHP errors upon client installs.
+* Server - [feature] Added name server checks to the dashboard.
+* Server - [feature] Added support for zone delegation. (Issue #48)
+* Server - [bug] View options can now be defined even when previously
+           defined in global options. (Issue #46)
+* Server - [feature] Added support for stub zones. (Issue #52)
+* Server - [bug] Improved cron updates. (Issue #66)
+* Client - [feature] Added client activity logging. (Issue #57)
+* Server - [bug] Prevent attempts to create non-existent record types for zones.
+* Server - [feature] Added forward PTR support specifically for DNS-SD. (Issue #63)
+* Server - [feature] Added support for wildcard records. (Issue #67)
+* Server - [bug] Improved interface for selecting server update method. (Issue #54)
+* Both   - [feature] Added support to auto-update client files. (Issue #53)
+* Server - Improved upgrade error handling.
+
+1.0.3 (2014-02-20)
+==================
+* Server - Improved server key configs. (Issue #60)
+* Server - [bug] Fixed help file typo.
+
+1.0.2 (2013-12-31)
+==================
+* Server - [bug] Fixed named checks with slave zones. (Issue #56)
+
+1.0.1 (2013-12-24)
+==================
+* Server - [feature] Added dnssec-validation config option. (Issue #50)
+* Server - [feature] Added bindkeys-file config option. (Issue #51)
+* Server - [bug] Fixed issue where new installations would not
+           populate the database properly. (Issue #55)
+* Server - [bug] Server update method can no longer be changed
+           from the webui if the server is installed. (Issue #54)
+
+1.0 (2013-12-16)
+================
+* Server - [feature] Added config option input validation. (Issue #35)
+* Server - [bug] Fixed false error reporting. (Issue #36)
+* Server - [bug] Fixed issue where server key definitions would be
+           incorrectly included in views. (Issue #40)
+* Server - [feature] Updated jquery animations.
+* Server - [bug] Fixed issue where views without zones defined would
+           cause the named-checks to fail. (Issue #41)
+* Server - [bug] Fixed server key syntax.
+* Server - [bug] Fixed 'Add more records' link. (Issue #42)
+* Server - [bug] Fixed some PHP errors.
+* Both   - [feature] Added option to purge configuration files. (Issue #43)
+* Both   - [bug] Fixed an issue where Debian-based files were not
+           getting created/updated. (Issue #43)
+* Server - [bug] Improved SOA create/update checks and updated help file. (Issue #44)
+* Client - [feature] Updated Apple startup script.
+* Both   - [feature] Added option to update client configs via SSH.
+* Server - [bug] Fixed an issue where the timezone was not set correctly for config
+           builds.
+* Server - [bug] Improved logging channel definitions regarding file
+           versions and size. (Issue #47)
+
+1.0-rc6 (2013-11-06)
+====================
+* Server - [feature] Added additional zone reload link. (Issue #26)
+* Server - [bug] Fixed show/hide of server build button.
+* Server - [bug] Fixed server options config syntax with listen-on. (Issue #30)
+* Client - [feature] OS detection now separates OS from distro.
+* Server - [bug] Fixed some php errors.
+* Server - [bug] Fixed an issue where zone imports could be performed (Issue #31)
+           without any defined zones.
+* Client - [feature] Checks for posix support before attempting to use it.
+* Server - [feature] Added an unsupported note during zone imports if $GENERATE and/or
+           $ORIGIN records are found.
+* Server - [bug] Fixed an issue where the server config build icon
+           would not appear when expected to. (Issue #32)
+* Server - [bug] Fixed an issue where record comments could not be
+           deleted. (Issue #33)
+
+1.0-rc5 (2013-10-16)
+====================
+* Server - [feature] Changed color of disabled items.
+* Client - [bug] Fixed broken zone reloads. (Issue #25)
+
+1.0-rc4-2 (2013-10-14)
+======================
+* Both   - [bug] Fixed broken config checks introduced in rc4  
+           regarding debian-based systems. (Issue #24)
+
+1.0-rc4-1 (2013-10-14)
+======================
+* Server - [bug] Creating zones now autoselects the correct zone type.
+* Server - [bug] Fixed broken ACLs introduced in rc4. (Issue #24)
+
+1.0-rc4 (2013-10-14)
+====================
+* Server - [feature] Added more validity checks.
+* Client - [bug] Fixed an issue where reinstallations would fail.
+* Client - [feature] Ubuntu systems now have named options defined in 
+           named.conf.options. (Issue #22)
+
+1.0-rc3 (2013-09-30)
+====================
+* Both   - [feature] Added support for server and clients to run http(s) on
+           non-standard ports. (Issue #20)
+* Server - [feature] Improved jquery functions.
+* Client - [feature] Added more Linux distros to OS detection.
+* Server - [feature] Displays OS type in server list.
+* Client - [bug] Fixed an issue where some clients may fail to install due to default 
+           named.conf ownership.
+
+1.0-rc2 (2013-09-18)
+====================
+* Server - [bug] Added missing view options. (Issue #16)
+* Server - [feature] Improved zone file imports. (Issue #17)
+* Server - [feature] Server config builds now use jquery.
+* Server - [feature] Added named-checkconf and named-checkzone support and the
+           ability to enable/disable the checks. (Issue #19)
+
+1.0-rc1 (2013-09-13)
+====================
+* Server - [feature] Uses the datetime format from facileManager settings.
+* Server - [feature] Improved support for IPv6.
+* Server - [feature] Improved domain name validity checks.
+* Server - [feature] Updated help files.
+
+1.0-b15 (2013-09-04)
+====================
+* Client - [bug] Fixed an issue where config builds would fail because of cloned zones.
+* Server - [bug] Can no longer delete a view when zones are associated with it.
+* Server - [bug] Zones containing clones cannot become a clone.
+* Server - [bug] Fixed the import wizard which broke in 1.0-b11.
+
+1.0-b14 (2013-09-03)
+====================
+* Server - [feature] Added zone name checking during add/edit. (Issue #13)
+* Server - [feature] Added support for split-brain dns. (Issue #14)
+* Client - [bug] Fixed an issue where under certain circumstances a zonefile does not
+           get built when it has clones.
+* Server - [feature] Zone deletes now use same jQuery as other record deletions.
+* Server - [feature] Cloned zones can now be deleted. (Issue #9)
+* Server - [feature] Added more error checking.
+
+1.0-b13 (2013-08-28)
+====================
+* Server - [feature] Set several tables to INNODB.
+* Server - [security] Users can now be limited to what zones they can manage. (Issue #7)
+* Both   - [feature] Added support for AAAA records.
+
+1.0-b12 (2013-08-23)
+====================
+* Server - [bug] Fixed database clean up bug.
+* Both   - [feature] Zone file records now sort by IP Address for readability.
+* Server - [bug] Fixed zone clone creation bug.
+* Client - [bug] Fixed issue where cloned zones were not loaded.
+
+1.0-b11 (2013-08-21)
+====================
+* Server - [bug] Improved server options configuration.
+* Both   - [bug] Fixed an issue where multiple views would yield the same configuration
+           options.
+
+1.0-b10 (2013-08-14)
+====================
+* Client - [feature] Attempts to start named if it's not running. (Issue #6)
+* Server - [bug] No longer presents a blank message if php+httpd are not configured
+           properly to receive updates via http(s).
+
+1.0-b9 (2013-08-14)
+===================
+* Server - [bug] Fixed an issue where the UI for servers was not displaying the
+           correct run-as account.
+* Client - [bug] Fixed an issue where http(s) update methods would incorrectly
+           report as failed.
+* Client - [feature] Will now be verbose about missing php-curl module in non-debug
+           mode now.
+* Client - [bug] Improved detection of default variables during install.
+
+1.0-b8 (2013-08-13)
+===================
+* Client - [bug] Fixed PHP redeclare error. (Issue #4)
+
+1.0-b7 (2013-08-13)
+===================
+* Server - [bug] Improved installation to prevent duplicate entries.
+* Server - [feature] Removed the duplicate connection test result.
+* Server - [feature] Removed 'djbdns' server type.
+* Server - [feature] Added help file.
+* Client - [feature] Additional install error checking.
+
+1.0-b5 (2013-08-10)
+===================
+* Server - [bug] Duplicate PTR records will not be created.
+* Server - [feature] Improved logging for options, views, and servers management.
+* Server - [bug] Fixed issue where an admin could not (un)install modules.
+
+1.0-b4 (2013-08-09)
+===================
+* Initial release.

@@ -1,0 +1,50 @@
+0.4.3 (2019-10-01)
+==================
+* Server - [security] Ensured header() calls are not skipped. (Found and reported
+           by Arturs Danilevics, Oskars Vegeris, and Ivars Vids)
+
+0.4.2 (2019-05-17)
+==================
+* Server - [bug] Fixed more PHP 7.3.x compatibility. (Issue #442)
+
+0.4.1 (2019-03-20)
+==================
+* Server - [bug] Fixed installs and upgrades with PHP 7.3.x. (Issue #436)
+
+0.4 (2019-03-16)
+================
+* Client - [bug] Fixed start-up script location for Debian-based and Redhat-based
+           systems. (Issue #426)
+* Server - [improvement] Cleaned up redundant code.
+* Client - [improvement] Added support for Scientific Linux. (Issue #431)
+* Server - [improvement] CSS and icon changes.
+
+0.3.2 (2018-12-16)
+==================
+* Server - [bug] Fixed peer address and peer port configuration for the
+           failover peers. (Issue #425)
+* Server - [bug] Fixed "load balance max seconds" peer option. (Issue #424)
+
+0.3.1 (2018-12-15)
+==================
+* Server - [bug] Fixed "load balance max seconds" peer option. (Issue #424)
+
+0.3 (2018-12-15)
+================
+* Server - [improvement] CSS changes.
+* Server - [bug] Fixed text.
+* Server - [bug] Fixed peer address and peer port configuration. (Issue #421)
+* Server - [bug] Fixed subnet/pool ordering. (Issue #422)
+* Server - [bug] Language fix.
+* Server - [bug] Fixed display-process-all functionality.
+
+0.2 (2018-10-26)
+================
+* Both   - [feature] Added support to delete active leases and to convert a lease
+           into a fixed address (host entry/reservation).
+* Server - [feature] Added support to set client options. (Issue #407)
+* Server - [bug] Fixed host edits.
+
+0.1 (2017-12-13)
+================
+* Initial release.
