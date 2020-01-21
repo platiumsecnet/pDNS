@@ -16,5 +16,5 @@ pDNS - Next generation DNS server
 # Hardware Requirements: 
 8C.8R.xxD (8 cores, 8GB Ram, Disk Storage depends on storage demands) for 500kqps
 
-# Performance comparison with Bind9, PowerDNS & Nominum DNS server
+# Performance comparison with _Bind9, PowerDNS & Nominum DNS server_
 
