@@ -7,6 +7,7 @@ pDNS - Next generation DNS server
 - Support more type of logs for monitoring & operation
 - Convenience to deploy & operation
 - Low Latency Procesing
+- Defence against critical attack types: 
 
 # Features
 1. Support all-features of Bind9
